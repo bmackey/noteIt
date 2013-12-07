@@ -23,6 +23,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'sqlite3'
+  gem 'strong_parameters'
 end
 
 group :test do
