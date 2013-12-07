@@ -1,4 +1,5 @@
 NoteIt::Application.routes.draw do
+  resources :users
 
   root  to: 'static_pages#home'
 
@@ -14,7 +15,6 @@ NoteIt::Application.routes.draw do
   get "static_pages/help"
   get "static_pages/contact"
 
-  get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
