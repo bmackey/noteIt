@@ -16,6 +16,9 @@
       <%= f.label :surname %>
       <%= f.text_field :lname %>
 
+      <%= f.label :course_id, "Select your Course" %>
+      <%= f.collection_select :course_id, Course.all, :course_id, :name %>
+
       <%= f.label :email %>
       <%= f.text_field :email %>
 

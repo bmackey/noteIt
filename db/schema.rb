@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131208140751) do
+ActiveRecord::Schema.define(:version => 20131208201435) do
+
+  create_table "courses", :force => true do |t|
+    t.string   "course_id"
+    t.string   "name"
+    t.integer  "duration"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "content"
@@ -23,6 +31,14 @@ ActiveRecord::Schema.define(:version => 20131208140751) do
 
   add_index "posts", ["user_id", "created_at"], :name => "index_posts_on_user_id_and_created_at"
 
+  create_table "projects", :force => true do |t|
+    t.string   "project_id",  :null => false
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "fname"
@@ -33,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20131208140751) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
+    t.string   "course_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

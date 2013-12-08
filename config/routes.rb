@@ -1,7 +1,10 @@
 NoteIt::Application.routes.draw do
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
+  resources :projects
+  resources :courses
 
   root  to: 'static_pages#home'
 
@@ -13,6 +16,10 @@ NoteIt::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+
+  match '/courses', to: 'courses#index',        via: 'get'
+
+  match '/projects', to:'projects#index',        via: 'get'
   
   get "static_pages/about"
   get "static_pages/home"

@@ -4,7 +4,10 @@
     <%= f.text_area :content, placeholder: "Compose new Post..." %>
   </div>
   <div class="field">
-    <%= f.text_area :star_rating, placeholder: "Enter you Star Rating..." %>
+    <%= f.label :star_rating, "Select your Star Rating" %>
+     <%= f.select :star_rating, [['1 Star', '1'],
+     							 ['2 Stars', '2'],
+     							 ['3 Stars', '3']] %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
-   before_filter :correct_user,   only: :destroy
+  before_filter :correct_user,   only: :destroy
 
 
   def create
@@ -21,8 +21,8 @@ class PostsController < ApplicationController
 
   private
 
-    def micropost_params
-      params.require(:post).permit(:content)
+    def post_params
+      params.require(:post).permit(:content, :star_rating)
     end
 
     def correct_user

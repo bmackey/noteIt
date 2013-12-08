@@ -3,7 +3,11 @@
     <span class="user">
       <%= link_to feed_item.user.username, feed_item.user %>
     </span>
-    <span class="content"><%= feed_item.content %></span>
+    <span class="content">
+      <%= feed_item.content %>
+      <br />
+      <p><%= image_tag("star.png", :alt => "star") %>Star Rating : <%= feed_item.star_rating %></p>
+    </span>
     <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
     </span>
