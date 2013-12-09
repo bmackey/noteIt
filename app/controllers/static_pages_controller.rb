@@ -3,8 +3,6 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def help
-  end
 
   def home
     if signed_in?

@@ -33,7 +33,7 @@ group :test do
 end
 
 gem 'jquery-rails'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '~> 2.3.0.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'turbolinks'
 gem 'jbuilder'
