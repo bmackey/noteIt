@@ -60,7 +60,7 @@ namespace :db do
     Project.create!(project_id: "P1295", name: "Project 18", description: "This project aims to descibe the link between blah and blah")
     Project.create!(project_id: "P1296", name: "Project 19", description: "This project aims to descibe the link between blah and blah")
     Project.create!(project_id: "P1297", name: "Project 20", description: "This project aims to descibe the link between blah and blah")
- 
+
   end
 end
 

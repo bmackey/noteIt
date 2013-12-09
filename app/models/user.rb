@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
+  belong_to :course
+  has_many :projects, :through => :posts,
+              :source => :user
+
 
 	ActiveModel::ForbiddenAttributesProtection
 	
