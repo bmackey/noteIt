@@ -4,10 +4,11 @@
     <%= f.text_area :content, placeholder: "Compose new Post..." %>
   </div>
   <div class="field">
-    <%= f.label :star_rating, "Select your Star Rating" %>
-     <%= f.select :star_rating, [['1 Star', '1'],
-     							 ['2 Stars', '2'],
-     							 ['3 Stars', '3']] %>
+    <%= f.label :star_rating, "Select your Star Rating: " %>
+     &nbsp;<%= f.radio_button :star_rating,'1 Star', :value =>'1'%>1&nbsp;
+     &nbsp;<%= f.radio_button :star_rating,'2 Stars', :value =>'2'%>2&nbsp;
+     &nbsp;<%= f.radio_button :star_rating,'3 Stars', :value =>'3'%>3&nbsp;
+     							 
   </div>
   <%= f.submit "Post", class: "btn btn-success" %>
 <% end %>
