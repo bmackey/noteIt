@@ -20,6 +20,7 @@ NoteIt::Application.routes.draw do
   match '/courses', to: 'courses#index',        via: 'get'
 
   match '/projects', to:'projects#index',        via: 'get'
+  match '/results', to:'projects#search',         via: 'get'
   
   get "static_pages/about"
   get "static_pages/home"

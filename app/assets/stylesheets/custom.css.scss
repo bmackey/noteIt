@@ -1,7 +1,6 @@
 @import "bootstrap";
 
-/* ---------------------mixins, variables, etc.------------------- */
-
+$lightGray: #999;
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -10,7 +9,7 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-/* ---------------------universal------------------- */
+///////////////////////////// universal styling \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 html {
   overflow-y: scroll;
@@ -35,7 +34,7 @@ textarea {
   }
 }
 
-/* ---------------------typeography------------------- */
+///////////////////////////// typography \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -62,7 +61,7 @@ p {
   line-height: 1.7em;
 }
 
-/* ---------------------header------------------- */
+///////////////////////////// header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 #logo {
   float: left;
@@ -80,7 +79,8 @@ p {
   }
 }
 
-/* ---------------------footer------------------- */
+///////////////////////////// footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -105,7 +105,7 @@ footer {
   }
 }
 
-/* ---------------------miscellaneous------------------- */
+///////////////////////////// miscellaneous \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .debug_dump {
   clear: both;
@@ -115,7 +115,7 @@ footer {
   @include box_sizing;
 }
 
-/* ---------------------sidebar------------------- */
+///////////////////////////// sidebar \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 aside {
   section {
@@ -145,7 +145,7 @@ aside {
   margin-right: 10px;
 }
 
-/* ---------------------forms------------------- */
+///////////////////////////// forms \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -171,8 +171,7 @@ input {
   @extend .error;
 }
 
-/* ---------------------Users Index------------------- */
-
+///////////////////////////// index \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .users {
   list-style: none;
   margin: 0;
@@ -185,21 +184,19 @@ input {
     }
   }
 }
+///////////////////////////// Information \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-/* ---------------------Posts------------------- */
-
-
-.microposts {
+.feedbacks {
   list-style: none;
   margin: 10px 0 0 0;
 
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
-
-    img {
-    height: 60px;
-    }
+      
+      img {
+        height: 60px;
+      }
   }
 }
 .content {

@@ -1,0 +1,7 @@
+<% if @projects.empty? %>
+        <span>There were no results for your query</span><br/><br/>
+<% else %>
+<% for project in @projects %>
+Result: <% project.name %>
+<% end %>
+<% end %>
